@@ -12,3 +12,4 @@ graph TD
   B --> L[Sensors]
   L --> M[Gyroscope/Accelerometer]
   B --> N[Motor Control Board]
+  L --> O[Sound Sensor]
