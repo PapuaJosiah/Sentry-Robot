@@ -14,7 +14,7 @@
 
 ## Remote Control
 - 1x  IR Sensors (maybe if we need remote control)
-- 1x  Motor control board
+- 1x  Motor control board (l298n motor driver)
 
 ## Frame
 - 1x  Self Balancing Robot kit (110090264)
