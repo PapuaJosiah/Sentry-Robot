@@ -7,7 +7,7 @@
 - 1x  training wheel
 
 ## Sound
-- 2x  SOUND-01 (Sound sensor)
+- 2x  SOUND Sensor (SY-M213)
 
 ## Distance Detection
 - _x  Ultrasonic Distance Sensor - HC-SR04 (5V)
