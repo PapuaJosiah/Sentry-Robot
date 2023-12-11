@@ -7,11 +7,17 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include "hardware/adc.h"
 #include "sound.c"
 #include "movement.c"
+#include "joystick.c"
 
 void setup() {
 
+    stdio_init_all();
+    adc_init();
+    adc_gpio_init(X_Pin);
+    adc_gpio_init(Y_Pin);
 	gpio_init(M1IN1);
 	gpio_set_dir(M1IN1, GPIO_OUT);
 	gpio_init(M1IN2);
@@ -30,6 +36,7 @@ void setup() {
     gpio_init(LEDPin2);
     gpio_set_dir(LEDPin2, GPIO_OUT);
 
+
 }
 
 void sound_isr(uint gpio_pin, uint32_t event_mask){
@@ -46,6 +53,7 @@ int main() {
 	while(1)
 {
     sleep_ms(100);
+    WhereTo();
     if((to_us_since_boot(triggerTimeR)) > (to_us_since_boot(triggerTimeL))){
     turn90();
     triggerTimeR = 0;
